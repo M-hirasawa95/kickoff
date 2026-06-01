@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberRecord EC本部 キックオフ資料 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --ink-muted: #6b6b6b;
+    --ink-faint: #c8c8c8;
+    --paper: #f7f6f2;
+    --white: #ffffff;
+    --accent: #0a0a0a;
+    --accent2: #c8ff00;
+    --accent3: #ff3c00;
+    --card-border: rgba(10,10,10,0.1);
+    --section-gap: 120px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(247,246,242,0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+  .nav-links a {
+    font-size: 11px; letter-spacing: 0.04em; color: var(--ink-muted);
+    text-decoration: none; text-transform: uppercase; font-weight: 400;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* SECTIONS */
+  section { padding: 120px 48px; max-width: 1200px; margin: 0 auto; }
+  section.full-width { max-width: 100%; padding: 0; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 48px 80px;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    background: var(--ink);
+  }
+  .hero-bg-text {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(80px, 15vw, 220px);
+    color: rgba(255,255,255,0.04);
+    white-space: nowrap; letter-spacing: -0.02em;
+    pointer-events: none; user-select: none;
+  }
+  .hero-eyebrow {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent2); font-weight: 400; margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+  .hero-title {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(40px, 6vw, 88px);
+    line-height: 1.05; letter-spacing: -0.02em;
+    color: var(--white);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+  .hero-title span { color: var(--accent2); }
+  .hero-sub {
+    margin-top: 32px; font-size: 16px; color: rgba(255,255,255,0.55);
+    max-width: 560px; line-height: 1.8;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+  .hero-stats {
+    margin-top: 64px;
+    display: flex; gap: 48px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 36px; color: var(--white); line-height: 1;
+  }
+  .hero-stat-num span { color: var(--accent2); font-size: 20px; }
+  .hero-stat-label {
+    font-size: 11px; color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .hero-scroll {
+    position: absolute; bottom: 80px; right: 48px;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.3); font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    animation: fadeIn 1.2s ease 1.4s forwards; opacity: 0;
+  }
+  .hero-scroll-line {
+    width: 1px; height: 60px; background: rgba(255,255,255,0.2);
+    animation: scrollLine 2s ease-in-out infinite 2s;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+  @keyframes scrollLine {
+    0%, 100% { transform: scaleY(1); transform-origin: top; }
+    50% { transform: scaleY(0.3); transform-origin: top; }
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-muted); font-weight: 400; margin-bottom: 48px;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--ink-faint);
+  }
+  .section-num {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 11px; color: var(--accent3);
+  }
+
+  /* SECTION TITLES */
+  .h2 {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.1; letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .h3 {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 22px; line-height: 1.3; letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+
+  /* PROBLEM SECTION */
+  .problem-section {
+    background: var(--white);
+    padding: 120px 48px;
+  }
+  .problem-inner { max-width: 1200px; margin: 0 auto; }
+  .problem-grid {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 80px;
+    margin-top: 64px;
+  }
+  .problem-sticky h3 {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 18px; color: var(--ink-muted);
+    line-height: 1.5; letter-spacing: -0.01em;
+  }
+  .problem-cards { display: flex; flex-direction: column; gap: 2px; }
+  .problem-card {
+    padding: 36px 40px;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    position: relative; overflow: hidden;
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .problem-card:hover { border-color: var(--ink); transform: translateX(4px); }
+  .problem-card-num {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 72px; color: rgba(10,10,10,0.04);
+    position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+    line-height: 1; pointer-events: none;
+  }
+  .problem-card-tag {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent3); font-weight: 400; margin-bottom: 12px;
+    padding: 4px 10px; border: 1px solid rgba(255,60,0,0.2);
+    border-radius: 2px;
+  }
+  .problem-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.85; max-width: 480px; }
+
+  /* ===== GLOBAL TYPOGRAPHY NORMALIZATION ===== */
+  /* Ensure Noto Sans JP is used for all body text */
+  .ai-tool-desc, .ct-desc, .ct-mod-desc, .rm-items li,
+  .ipo-story-text, .tv-text, .mb-text,
+  .ai-flow-action, .ig-label, .hero-stat-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+  }
+  /* Consistent body text size: 15px minimum */
+  .ct-desc { font-size: 14px; line-height: 1.85; }
+  .ct-mod-desc { font-size: 14px; line-height: 1.85; }
+  .ai-tool-desc { font-size: 14px; line-height: 1.85; }
+  .rm-items li { font-size: 15px; line-height: 1.85; }
+  .ipo-story-text { font-size: 15px; line-height: 1.95; }
+  .tv-text { font-size: 14px; line-height: 1.85; }
+  .mb-text { font-size: 15px; line-height: 1.85; }
+  /* Syne for display elements only */
+  .h2, .h3, .ct-phase-name, .ct-fee, .rm-title,
+  .ai-tool-name, .ai-tool-reduction,
+  .hero-stat-num, .ipo-metric-num,
+  .ig-num, .tv-title, .mb-num, .mb-title {
+    font-family: 'Syne', sans-serif;
+  }
+  /* Tighten letter-spacing on labels */
+  .section-label, .problem-card-tag, .s-card-tag,
+  .ct-period, .ct-mod-tag, .ai-tool-role,
+  .rm-period, .ipo-metric-year, .tv-label {
+    letter-spacing: 0.1em;
+  }
+  .strategy-section { padding: 120px 48px; }
+  .strategy-inner { max-width: 1200px; margin: 0 auto; }
+  .strategy-intro {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    margin-bottom: 80px; align-items: end;
+  }
+  .strategy-intro p { font-size: 16px; color: var(--ink-muted); line-height: 1.9; }
+  .strategy-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .s-card {
+    background: var(--white);
+    padding: 48px 40px;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    position: relative; overflow: hidden;
+    transition: all 0.3s;
+  }
+  .s-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(0,0,0,0.06); }
+  .s-card-icon {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 32px;
+    font-family: 'Syne', sans-serif; font-weight: 800;
+  }
+  .s-card-icon.c1 { background: rgba(200,255,0,0.15); color: var(--ink); }
+  .s-card-icon.c2 { background: rgba(255,60,0,0.1); color: var(--accent3); }
+  .s-card-icon.c3 { background: rgba(10,10,10,0.06); color: var(--ink); }
+  .s-card-tag {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-muted); font-weight: 400; margin-bottom: 8px;
+  }
+  .s-card-old {
+    font-size: 12px; color: var(--ink-faint); text-decoration: line-through;
+    margin-bottom: 8px; letter-spacing: 0.04em;
+  }
+  .s-card-new {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 20px; line-height: 1.3; margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .s-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.85; }
+
+  /* GLOBAL INLINE STYLE OVERRIDES — normalize font sizes */
+  p, li, div { font-family: 'Noto Sans JP', sans-serif; }
+  strong { font-family: inherit; }
+  .s-card-bar {
+    position: absolute; bottom: 0; left: 0; height: 3px; width: 0;
+    transition: width 0.6s ease;
+  }
+  .s-card:hover .s-card-bar { width: 100%; }
+  .s-card:nth-child(1) .s-card-bar { background: var(--accent2); }
+  .s-card:nth-child(2) .s-card-bar { background: var(--accent3); }
+  .s-card:nth-child(3) .s-card-bar { background: var(--ink); }
+
+  /* DEEP DIVE C-TRANS */
+  .ctrans-section {
+    background: var(--ink); color: var(--white);
+    padding: 120px 48px;
+  }
+  .ctrans-inner { max-width: 1200px; margin: 0 auto; }
+  .ctrans-section .section-label { color: rgba(255,255,255,0.3); }
+  .ctrans-section .section-label::before { background: rgba(255,255,255,0.15); }
+  .ctrans-section .h2 { color: var(--white); }
+  .ctrans-header {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    margin-bottom: 80px; align-items: end;
+  }
+  .ctrans-header p { color: rgba(255,255,255,0.5); font-size: 15px; line-height: 1.9; }
+  .ctrans-timeline {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px; overflow: hidden;
+  }
+  .ct-phase {
+    background: rgba(255,255,255,0.03);
+    padding: 40px 32px;
+    transition: background 0.3s;
+  }
+  .ct-phase:hover { background: rgba(255,255,255,0.07); }
+  .ct-period {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.3); margin-bottom: 12px;
+  }
+  .ct-phase-name {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 16px; color: var(--white); margin-bottom: 16px;
+  }
+  .ct-fee {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 22px; color: var(--accent2); margin-bottom: 16px;
+  }
+  .ct-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.8; }
+  .ctrans-modules {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+    margin-top: 80px;
+  }
+  .ct-module {
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  .ct-module:hover { border-color: rgba(200,255,0,0.4); }
+  .ct-mod-num {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 48px; color: rgba(255,255,255,0.05); float: right;
+    line-height: 1;
+  }
+  .ct-mod-tag {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent2); margin-bottom: 12px; font-weight: 400;
+  }
+  .ct-mod-title {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 18px; color: var(--white); margin-bottom: 12px;
+  }
+  .ct-mod-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.8; }
+
+  /* AI SECTION */
+  .ai-section { padding: 120px 48px; background: var(--white); }
+  .ai-inner { max-width: 1200px; margin: 0 auto; }
+  .ai-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 2px; margin-top: 64px;
+  }
+  .ai-tool {
+    padding: 36px 28px;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .ai-tool:hover { border-color: var(--ink); }
+  .ai-tool-name {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 16px; margin-bottom: 8px;
+  }
+  .ai-tool-role {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-muted); margin-bottom: 16px;
+  }
+  .ai-tool-desc { font-size: 13px; color: var(--ink-muted); line-height: 1.8; }
+  .ai-tool-reduction {
+    margin-top: 20px; font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 28px; color: var(--ink);
+  }
+  .ai-tool-reduction span { font-size: 13px; color: var(--ink-muted); font-family: 'Noto Sans JP', sans-serif; font-weight: 300; }
+  .ai-bar {
+    position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+  }
+  .ai-tool:nth-child(1) .ai-bar { background: var(--accent2); }
+  .ai-tool:nth-child(2) .ai-bar { background: var(--accent3); }
+  .ai-tool:nth-child(3) .ai-bar { background: #6600ff; }
+  .ai-tool:nth-child(4) .ai-bar { background: #0066ff; }
+  .ai-tool:nth-child(5) .ai-bar { background: var(--ink); }
+  .ai-flow {
+    margin-top: 64px; padding: 48px;
+    background: var(--paper); border-radius: 4px;
+    display: flex; align-items: center; gap: 0;
+  }
+  .ai-flow-step {
+    flex: 1; text-align: center; padding: 24px 16px;
+    position: relative;
+  }
+  .ai-flow-step::after {
+    content: '→';
+    position: absolute; right: -12px; top: 50%; transform: translateY(-50%);
+    color: var(--ink-faint); font-size: 18px;
+  }
+  .ai-flow-step:last-child::after { display: none; }
+  .ai-flow-tool { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; }
+  .ai-flow-action { font-size: 12px; color: var(--ink-muted); margin-top: 4px; }
+
+  /* ROADMAP */
+  .roadmap-section { padding: 120px 48px; }
+  .roadmap-inner { max-width: 1200px; margin: 0 auto; }
+  .roadmap-steps {
+    margin-top: 64px; position: relative;
+  }
+  .roadmap-steps::before {
+    content: '';
+    position: absolute; left: 24px; top: 0; bottom: 0; width: 1px;
+    background: var(--card-border);
+  }
+  .rm-step {
+    display: grid; grid-template-columns: 48px 1fr; gap: 40px;
+    margin-bottom: 2px; align-items: start;
+  }
+  .rm-dot {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--white); border: 1px solid var(--card-border);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
+    position: relative; z-index: 1;
+    transition: all 0.3s;
+  }
+  .rm-step:hover .rm-dot {
+    background: var(--ink); color: var(--white); border-color: var(--ink);
+  }
+  .rm-content {
+    background: var(--white);
+    padding: 36px 40px;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    margin-bottom: 2px;
+    transition: all 0.3s;
+  }
+  .rm-step:hover .rm-content { border-color: var(--ink); }
+  .rm-period {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-muted); margin-bottom: 8px;
+  }
+  .rm-title {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 20px; margin-bottom: 12px;
+  }
+  .rm-items { list-style: none; }
+  .rm-items li {
+    font-size: 14px; color: var(--ink-muted); padding: 6px 0;
+    border-bottom: 1px solid var(--card-border);
+    display: flex; gap: 12px; align-items: baseline;
+  }
+  .rm-items li:last-child { border-bottom: none; }
+  .rm-items li::before {
+    content: '—'; color: var(--ink-faint); flex-shrink: 0;
+  }
+
+  /* IPO TARGET */
+  .ipo-section {
+    background: var(--ink);
+    padding: 120px 48px;
+    position: relative; overflow: hidden;
+  }
+  .ipo-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .ipo-bg {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 300px; color: rgba(255,255,255,0.02);
+    white-space: nowrap; pointer-events: none; user-select: none;
+    line-height: 1;
+  }
+  .ipo-section .section-label { color: rgba(255,255,255,0.3); }
+  .ipo-section .section-label::before { background: rgba(255,255,255,0.15); }
+  .ipo-section .h2 { color: var(--white); }
+  .ipo-metrics {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    margin-top: 64px;
+  }
+  .ipo-metric {
+    padding: 48px 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+  }
+  .ipo-metric-year {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.3); margin-bottom: 16px;
+  }
+  .ipo-metric-num {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 52px; color: var(--white); line-height: 1;
+    margin-bottom: 8px;
+  }
+  .ipo-metric-num span { color: var(--accent2); font-size: 28px; }
+  .ipo-metric-label { font-size: 14px; color: rgba(255,255,255,0.4); }
+  .ipo-story {
+    margin-top: 64px; padding: 48px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center;
+  }
+  .ipo-story-title {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 18px; color: var(--white); margin-bottom: 8px;
+  }
+  .ipo-story-sub { font-size: 14px; color: rgba(255,255,255,0.4); }
+  .ipo-story-text { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.9; }
+
+  /* MESSAGE (要約) SECTION */
+  .message-section {
+    padding: 120px 48px;
+    background: var(--paper);
+    border-top: 1px solid var(--card-border);
+  }
+  .message-inner { max-width: 1200px; margin: 0 auto; }
+  .message-quote {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(28px, 3.5vw, 52px);
+    line-height: 1.15; letter-spacing: -0.02em;
+    margin: 48px 0; max-width: 900px;
+  }
+  .message-quote em { font-style: normal; color: var(--accent3); }
+  .message-bullets {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    margin-top: 64px;
+  }
+  .mb-item {
+    padding: 32px; background: var(--white);
+    border-left: 3px solid var(--ink); border-radius: 0 4px 4px 0;
+  }
+  .mb-num {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 40px; opacity: 0.08; margin-bottom: -8px;
+  }
+  .mb-title {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 16px; margin-bottom: 8px;
+  }
+  .mb-text { font-size: 14px; color: var(--ink-muted); line-height: 1.8; }
+  .message-cta {
+    margin-top: 80px; text-align: center;
+    padding: 80px 48px;
+    background: var(--ink); border-radius: 4px;
+    position: relative; overflow: hidden;
+  }
+  .message-cta-bg {
+    position: absolute; inset: 0;
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 200px; color: rgba(255,255,255,0.02);
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none; user-select: none; overflow: hidden;
+  }
+  .message-cta h2 {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(24px, 3vw, 44px); color: var(--white);
+    letter-spacing: -0.02em; margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .message-cta h2 span { color: var(--accent2); }
+  .message-cta p {
+    font-size: 15px; color: rgba(255,255,255,0.45);
+    position: relative; z-index: 1;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 48px;
+    background: var(--ink); color: rgba(255,255,255,0.3);
+    font-size: 12px; letter-spacing: 0.06em;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  footer strong { color: rgba(255,255,255,0.6); font-weight: 400; }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px; background: var(--card-border);
+    max-width: 1200px; margin: 0 auto;
+  }
+
+  /* INFOGRAPHIC HIGHLIGHTS */
+  .infographic-row {
+    display: flex; gap: 0; margin: 64px 0;
+    border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden;
+  }
+  .ig-item {
+    flex: 1; padding: 40px 32px;
+    border-right: 1px solid var(--card-border);
+    text-align: center;
+  }
+  .ig-item:last-child { border-right: none; }
+  .ig-num {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 44px; line-height: 1; margin-bottom: 4px;
+  }
+  .ig-label { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.04em; }
+
+  /* TRANSITION ARROW VISUAL */
+  .transform-visual {
+    margin: 64px 0; padding: 48px;
+    background: var(--paper); border-radius: 4px;
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 32px; align-items: center;
+  }
+  .tv-box {
+    padding: 32px; border: 1px solid var(--card-border);
+    border-radius: 4px; background: var(--white);
+  }
+  .tv-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px; }
+  .tv-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+  .tv-text { font-size: 13px; color: var(--ink-muted); line-height: 1.8; }
+  .tv-arrow {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 36px; color: var(--accent3); text-align: center;
+  }
+  .tv-new { border-color: var(--ink) !important; }
+  .tv-new .tv-label { color: var(--accent3); }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0; transform: translateY(32px);
+    transition: all 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1; transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">CyberRecord / EC本部</div>
+  <ul class="nav-links">
+    <li><a href="#problem">課題</a></li>
+    <li><a href="#strategy">方針</a></li>
+    <li><a href="#ctrans">インハウス支援</a></li>
+    <li><a href="#ai">AI化</a></li>
+    <li><a href="#philosophy">省力化哲学</a></li>
+    <li><a href="#roadmap">実行計画</a></li>
+    <li><a href="#retail">小売Tier</a></li>
+    <li><a href="#ipo">IPO目標</a></li>
+    <li><a href="#org" style="color:var(--accent3);">組織図</a></li>
+    <li><a href="#roles" style="color:var(--accent3);">役割</a></li>
+    <li><a href="#tactics" style="color:var(--accent3);">戦術</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="full-width">
+  <div class="hero">
+    <div class="hero-bg-text">TRANSFORM</div>
+    <p class="hero-eyebrow">EC本部 キックオフ 2025 — 中期経営変革マスタープラン</p>
+    <h1 class="hero-title">
+      EC代行から<br>
+      <span>地域価値共創</span><br>
+      プラットフォームへ
+    </h1>
+    <p class="hero-sub">労働集約型モデルの限界を突き破り、知識集約型の高収益構造へ。<br>
+    上場・売上100億円・時価総額1,000億円を北極星に、いまEC事業本部がさらに重要なミッションを背負う。</p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">100<span>億円</span></div>
+        <div class="hero-stat-label">2029年 売上目標</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">1,000<span>億円</span></div>
+        <div class="hero-stat-label">2031年 時価総額目標</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">6,000<span>社</span></div>
+        <div class="hero-stat-label">地域ネットワーク事業者</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">280<span>名</span></div>
+        <div class="hero-stat-label">グループ連結規模</div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM SECTION -->
+<section class="full-width" id="problem">
+  <div class="problem-section">
+    <div class="problem-inner">
+      <div class="section-label"><span class="section-num">01</span> 変革の背景 <span style="font-size:10px; padding:2px 8px; background:rgba(10,10,10,0.08); border-radius:2px; margin-left:8px; letter-spacing:0.06em;">社内</span></div>
+      <h2 class="h2 reveal">従来モデルが抱える<br>3つの構造的限界</h2>
+
+      <div class="infographic-row reveal">
+        <div class="ig-item">
+          <div class="ig-num" style="color: var(--accent3);">15.2<span style="font-size:24px">兆円</span></div>
+          <div class="ig-label">2024年 BtoC-EC市場規模</div>
+        </div>
+        <div class="ig-item">
+          <div class="ig-num" style="color: var(--ink);">514.4<span style="font-size:24px">兆円</span></div>
+          <div class="ig-label">BtoB-EC市場規模</div>
+        </div>
+        <div class="ig-item">
+          <div class="ig-num" style="color: var(--accent3);">↑10.6%</div>
+          <div class="ig-label">BtoB市場 前年比成長率</div>
+        </div>
+        <div class="ig-item">
+          <div class="ig-num">第5次</div>
+          <div class="ig-label">2025〜 AI活用成長期へ突入</div>
+        </div>
+      </div>
+
+      <div class="problem-grid reveal">
+        <div class="problem-sticky">
+          <h3>市場は伸びている。<br>しかし、古いビジネスモデルのまま<br>では限界がある。</h3>
+        </div>
+        <div class="problem-cards">
+          <div class="problem-card">
+            <div class="problem-card-num">01</div>
+            <div class="problem-card-tag">内製化の罠</div>
+            <h3 class="h3">成長させるほど離脱される「自己矛盾」</h3>
+            <p>売上が月商1,000万円を超えると、クライアントは外注費削減のため内製化に踏み切る。「優秀な代行ほど顧客を失う」という構造的矛盾を根本から解消する必要がある。</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-num">02</div>
+            <div class="problem-card-tag">コモディティ化</div>
+            <h3 class="h3">AIに追い越される労働集約型モデル</h3>
+            <p>商品登録・受注処理などの定型作業をAIが代替するスピードは人件費上昇を大幅に超える。人力作業に依存し続ける企業は価格競争の渦に沈むだけだ。</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-num">03</div>
+            <div class="problem-card-tag">利害不一致</div>
+            <h3 class="h3">成果報酬型が生む「売上至上主義」の歪み</h3>
+            <p>売上の5〜10%を徴収する成果報酬型では、代行会社が値引きや広告費投入を優先しクライアントの粗利を毀損する。信頼関係の破綻が後を絶たない根本原因だ。</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-num">04</div>
+            <div class="problem-card-tag">サプライチェーン</div>
+            <h3 class="h3">物流・出口戦略の不在が機会損失を生む</h3>
+            <p>返品・滞留在庫・越境出荷など物流に課題を持つクライアントは多い。リバースロジスティクス（回収→再定義→二次流通）を提供できなければ、EC代行はサプライチェーン全体のパートナーには成れない。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 旧モデルの悪循環 -->
+      <div style="margin-top: 80px;" class="reveal">
+        <div class="section-label" style="margin-bottom: 32px;"><span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent3); font-weight:400;">— 旧モデルの悪循環</span></div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;">
+          <div style="padding: 32px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; border-top: 3px solid var(--accent3);">
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.06em;">モール競争激化</div>
+            <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">アルゴリズム変化・価格競争が加速。広告効果は減衰し続ける。</div>
+            <div style="margin-top:16px; font-family:'Syne',sans-serif; font-weight:700; font-size:22px; color:var(--accent3);">↓</div>
+            <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">モール売上低下→他施策検討→当社では対応不可</div>
+          </div>
+          <div style="padding: 32px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; border-top: 3px solid var(--accent3);">
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.06em;">人件費高騰</div>
+            <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">専門人材の採用難と単価上昇。人を増やすほどコストが膨張。</div>
+            <div style="margin-top:16px; font-family:'Syne',sans-serif; font-weight:700; font-size:22px; color:var(--accent3);">↓</div>
+            <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">一人当たり負荷増→退職→支援数減少</div>
+          </div>
+          <div style="padding: 32px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; border-top: 3px solid var(--accent3);">
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.06em;">クライアント単価下落</div>
+            <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">サービス範囲を絞り価格を下げても競合には勝てない。</div>
+            <div style="margin-top:16px; font-family:'Syne',sans-serif; font-weight:700; font-size:22px; color:var(--accent3);">↓</div>
+            <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">外注コスト増加→利益減少→早期解約</div>
+          </div>
+          <div style="padding: 32px; background: var(--ink); border: 1px solid var(--ink); border-radius: 4px;">
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent2);">結論</div>
+            <div style="font-size:14px; color:rgba(255,255,255,0.7); line-height:1.9;">「EC代行」という旧来の枠組みを超え、クライアントのビジネス全体の成功にコミットする<strong style="color:var(--white);">「事業成長パートナー」</strong>へ。会社も、メンバーも全員のお金が増えない構造を根本から壊す。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY SECTION -->
+<section id="strategy">
+  <div class="section-label reveal"><span class="section-num">02</span> 今期の事業方針 <span style="font-size:10px; padding:2px 8px; background:rgba(10,10,10,0.08); border-radius:2px; margin-left:8px; letter-spacing:0.06em;">社内</span></div>
+  <div class="strategy-intro reveal">
+    <h2 class="h2">まずサービスを<br>完成させる。<br>AIはその先だ。</h2>
+    <p>AIを活用したインハウス支援は来るべき未来の姿だ。しかし今すぐリリースできるわけではない。今期は「クライアントの売上最大化」を軸に、まずEC支援サービスを本当の意味で完成させることが最優先課題だ。インハウス化を支援しながらも、当社はあの手この手でLTVを伸ばすサービスを当て続ける。クライアントが強くなれば、当社も強くなる。それが新しい関係設計だ。</p>
+  </div>
+
+  <!-- フェーズ進行図 -->
+  <div style="margin-bottom: 80px;" class="reveal">
+    <div style="display: grid; grid-template-columns: 1fr 40px 1fr 40px 1fr; gap: 0; align-items: center;">
+      <!-- Phase 1 -->
+      <div style="border: 2px solid var(--ink); border-radius: 4px; padding: 40px; background: var(--ink); position:relative;">
+        <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent2); margin-bottom:12px;">PHASE 1 — 今期完成（FY27/8〜FY28/7）</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--white); margin-bottom:16px; line-height:1.3;">EC売上最大化から<br>クライアント価値の<br>最大化へ</div>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:20px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--accent2); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.6);">EC運営（楽天・Amazon・自社EC）</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--accent2); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.6);">広告・SNS運用</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--accent2); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.6);">ECコンサルティング</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--accent3); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.85); font-weight:500;">★ 物流ソリューション（今期の最重要補完）</div>
+          </div>
+        </div>
+        <div style="padding:16px 20px; background:rgba(200,255,0,0.1); border:1px solid rgba(200,255,0,0.25); border-radius:4px;">
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:28px; color:var(--accent2); line-height:1;">4<span style="font-size:16px; font-weight:400; color:rgba(255,255,255,0.5);">億円</span></div>
+          <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-top:4px; letter-spacing:0.06em;">EC事業 FY目標</div>
+        </div>
+      </div>
+      <!-- Arrow -->
+      <div style="text-align:center; font-family:'Syne',sans-serif; font-weight:800; font-size:28px; color:var(--ink-faint);">→</div>
+      <!-- Phase 2 -->
+      <div style="border: 1px solid var(--card-border); border-radius: 4px; padding: 40px; background: var(--white);">
+        <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:12px;">PHASE 2 — 来るべき未来への備え</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; margin-bottom:16px; line-height:1.3;">AIを前提とした<br>インハウス支援＋<br>LTV継続拡大へ</div>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:20px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--ink-faint); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:var(--ink-muted);">インハウス化を支援しながらLTVを伸長</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--ink-faint); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:var(--ink-muted);">Claude×ECパッケージで新収益レイヤー</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--ink-faint); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:var(--ink-muted);">請求書・デザイン・CSの自動化を販売</div>
+          </div>
+        </div>
+        <div style="padding:16px 20px; background:var(--paper); border:1px solid var(--card-border); border-radius:4px;">
+          <div style="font-size:14px; color:var(--ink-muted); line-height:1.8;">インハウス化を支援しつつ、AIパッケージを次々と当てることでクライアントとの関係をより深く・長くする。</div>
+        </div>
+      </div>
+      <!-- Arrow -->
+      <div style="text-align:center; font-family:'Syne',sans-serif; font-weight:800; font-size:28px; color:var(--ink-faint);">→</div>
+      <!-- Phase 3 -->
+      <div style="border: 1px solid var(--card-border); border-radius: 4px; padding: 40px; background: var(--white);">
+        <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:12px;">PHASE 3 — 中長期</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; margin-bottom:16px; line-height:1.3;">地域価値共創<br>プラットフォームと<br>IPO</div>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:20px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--ink-faint); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:var(--ink-muted);">M&Aロールアップ・SPA展開</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--ink-faint); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:var(--ink-muted);">地方D2C企業との共創エコシステム</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:var(--ink-faint); flex-shrink:0;"></div>
+            <div style="font-size:13px; color:var(--ink-muted);">東証上場（目標時期は状況に応じて判断）</div>
+          </div>
+        </div>
+        <div style="padding:16px 20px; background:var(--paper); border:1px solid var(--card-border); border-radius:4px;">
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:28px; color:var(--ink-muted); line-height:1;">1,000<span style="font-size:16px; font-weight:400;">億円</span></div>
+          <div style="font-size:11px; color:var(--ink-muted); margin-top:4px; letter-spacing:0.06em;">時価総額目標（2031年）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 今期の最重要ミッション：物流ソリューション -->
+  <div style="margin-bottom: 80px;" class="reveal">
+    <div style="margin-bottom: 40px;">
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent3); margin-bottom: 16px; display: flex; align-items: center; gap: 10px;"><span style="display:block; width:32px; height:1px; background:rgba(255,60,0,0.3);"></span>FY18における重要補完ピース</div>
+      <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 42px); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 8px;">出口の物流ソリューションが<br>FY18における重要ピースだ</div>
+    </div>
+
+    <!-- なぜモールで物流が必要か 説明ブロック -->
+    <div style="padding: 48px; background: var(--ink); border-radius: 4px; margin-bottom: 2px;">
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 28px;">— そもそも、なぜEC運営に物流が必要なのか？</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+        <div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--white); margin-bottom: 16px; line-height: 1.4;">「売る」と「届ける」は<br>セットで初めてビジネスが完結する</div>
+          <p style="font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.9;">楽天・Amazonなどのモールで商品が売れると、必ず「出荷・配送」という物理的な工程が発生する。EC代行として売上を伸ばせば伸ばすほど、物流の処理件数も比例して増加する。つまり物流は、EC運営と切っても切り離せない「インフラ」だ。</p>
+        </div>
+        <div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--white); margin-bottom: 16px; line-height: 1.4;">クライアントが悲鳴を上げる<br>3つの物流リアル</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="padding: 16px 20px; background: rgba(255,255,255,0.05); border-radius: 4px; border-left: 3px solid var(--accent3);">
+              <div style="font-size: 13px; font-weight: 500; color: var(--white); margin-bottom: 4px;">① 繁忙期の出荷遅延・クレーム爆発</div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7;">セール・イベント期に出荷が追いつかずレビュー炎上。せっかく上げた売上が評価悪化で台無しになる。</div>
+            </div>
+            <div style="padding: 16px 20px; background: rgba(255,255,255,0.05); border-radius: 4px; border-left: 3px solid var(--accent3);">
+              <div style="font-size: 13px; font-weight: 500; color: var(--white); margin-bottom: 4px;">② 滞留在庫がキャッシュを圧迫</div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7;">売れ残り在庫は倉庫保管コストとして毎月消えていく。返品・廃棄・二次流通の「出口」がないと資金繰りが詰まる。</div>
+            </div>
+            <div style="padding: 16px 20px; background: rgba(255,255,255,0.05); border-radius: 4px; border-left: 3px solid var(--accent3);">
+              <div style="font-size: 13px; font-weight: 500; color: var(--white); margin-bottom: 4px;">③ 返品対応が属人的でコスト高</div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7;">EC拡大に伴い返品数も増加。検品・再販・廃棄の判断が担当者個人に依存し、処理コストが膨らみ続ける。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 当社の現状ギャップ -->
+    <div style="padding: 40px 48px; background: var(--paper); border-radius: 4px; margin-bottom: 2px; border: 1px solid var(--card-border);">
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 24px;">— 今の当社サービスとのギャップ</div>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; align-items: center;">
+        <div style="padding: 20px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; text-align: center;">
+          <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px;">集客・販売</div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 6px;">EC運営</div>
+          <div style="font-size: 11px; color: var(--accent3); background: rgba(255,60,0,0.06); padding: 3px 8px; border-radius: 2px; display: inline-block;">✓ 対応済</div>
+        </div>
+        <div style="padding: 20px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; text-align: center;">
+          <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px;">需要創出</div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 6px;">広告・SNS</div>
+          <div style="font-size: 11px; color: var(--accent3); background: rgba(255,60,0,0.06); padding: 3px 8px; border-radius: 2px; display: inline-block;">✓ 今期拡充</div>
+        </div>
+        <div style="padding: 20px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; text-align: center;">
+          <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px;">戦略設計</div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 6px;">コンサル</div>
+          <div style="font-size: 11px; color: var(--accent3); background: rgba(255,60,0,0.06); padding: 3px 8px; border-radius: 2px; display: inline-block;">✓ 今期拡充</div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 24px; color: var(--ink-faint);">+</div>
+        <div style="padding: 20px; background: var(--ink); border: 2px solid var(--accent3); border-radius: 4px; text-align: center;">
+          <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent3); margin-bottom: 8px;">出口設計</div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 6px; color: var(--white);">物流・返品・<br>在庫最適化</div>
+          <div style="font-size: 11px; color: var(--accent2); background: rgba(200,255,0,0.1); padding: 3px 8px; border-radius: 2px; display: inline-block;">→ 今期構築</div>
+        </div>
+      </div>
+      <div style="margin-top: 24px; padding: 20px 24px; background: var(--white); border-left: 3px solid var(--accent3); border-radius: 0 4px 4px 0;">
+        <p style="font-size: 15px; color: var(--ink); line-height: 1.85;">EC運営・広告・SNS・コンサルは揃えてきた。しかしクライアントは「売ること」だけでなく「届けること・返すこと・在庫を活かすこと」まで一気通貫でサポートしてほしいと思っている。物流ソリューションを加えることで、当社はEC支援を初めて<strong style="font-weight: 600;">「入口から出口まで完結」</strong>させられる。これがAIとは関係なく、今すぐ揃えるべき最後のピースだ。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="transform-visual reveal">
+    <div class="tv-box">
+      <div class="tv-label">Before — FY17まで</div>
+      <div class="tv-title">EC売上の最大化</div>
+      <div class="tv-text">目的はモール売上。手段はECのみ。クライアントが伸びるほど内製化し、離脱される自己矛盾。</div>
+    </div>
+    <div class="tv-arrow">→</div>
+    <div class="tv-box tv-new">
+      <div class="tv-label">After — FY18から（今期完成）</div>
+      <div class="tv-title">クライアント価値の最大化</div>
+      <div class="tv-text">目的はクライアントのビジネス全体の成功。手段はEC・SNS・広告・物流・コンサルをフル活用。今期は物流で完結させる。</div>
+    </div>
+  </div>
+</section>
+
+<!-- INHOUSE + CLAUDE×EC UNIFIED SECTION -->
+<section class="full-width" id="ctrans">
+  <div class="ctrans-section">
+    <div class="ctrans-inner">
+      <div class="section-label reveal"><span class="section-num" style="color: var(--accent2);">03</span> インハウス支援 × LTV設計 <span style="font-size:10px; padding:2px 8px; background:rgba(200,255,0,0.15); border-radius:2px; margin-left:8px; letter-spacing:0.06em; color:var(--ink);">社外提供価値の参考</span></div>
+
+      <!-- ヘッダー -->
+      <div class="ctrans-header reveal">
+        <h2 class="h2">インハウス化しても<br>当社は必要とされ続ける。<br>その仕組みをつくる。</h2>
+        <p>クライアントがEC運営を自走できるようになっても、終わりではない。インハウス化を支援しながら、当社はあの手この手でLTVを伸ばすサービスを当て続ける。クライアントが強くなるほど、当社も深く必要とされる——その関係を設計する。</p>
+      </div>
+
+      <!-- 関係設計の3ステージ -->
+      <div class="ctrans-timeline reveal">
+        <div class="ct-phase">
+          <div class="ct-period">ステージ 1</div>
+          <div class="ct-phase-name">EC支援・売上最大化</div>
+          <div class="ct-fee" style="font-size:18px;">運営代行<span style="font-size:14px; color:rgba(255,255,255,0.4)"> / 広告・SNS / 物流</span></div>
+          <div class="ct-desc">クライアントの売上を徹底的に伸ばす。EC運営・広告・SNS・コンサル・物流をフル活用。まずここを完璧にすることが全ての起点。</div>
+        </div>
+        <div class="ct-phase">
+          <div class="ct-period">ステージ 2</div>
+          <div class="ct-phase-name">インハウス化の伴走</div>
+          <div class="ct-fee" style="font-size:18px;">OJT・Wiki<span style="font-size:14px; color:rgba(255,255,255,0.4)"> / BI / 標準化</span></div>
+          <div class="ct-desc">クライアントの担当者を育て、業務をNotionにWiki化し、BIダッシュボードで経営判断を移植する。自走できる組織をつくる伴走支援。</div>
+        </div>
+        <div class="ct-phase">
+          <div class="ct-period">ステージ 3</div>
+          <div class="ct-phase-name">AIパッケージの継続提供</div>
+          <div class="ct-fee" style="color: var(--accent2); font-size:18px;">Claude×EC<span style="font-size:14px; color:rgba(255,255,255,0.4)"> パッケージ群</span></div>
+          <div class="ct-desc">自走後も終わらない。請求書自動化・デザイン量産・CS自動応答など、AIパッケージを次々と当てることでLTVを拡大し続ける。</div>
+        </div>
+        <div class="ct-phase" style="border-left: 2px solid rgba(200,255,0,0.3);">
+          <div class="ct-period">継続的に</div>
+          <div class="ct-phase-name">あの手この手で<br>LTVを伸ばす</div>
+          <div class="ct-fee" style="font-size:16px; color:var(--accent2);">新サービス<span style="font-size:13px; color:rgba(255,255,255,0.4)"> 順次追加</span></div>
+          <div class="ct-desc">市場や技術が変わるたびに、当社はクライアントに新しい価値を届ける。関係は深まり続け、LTVは積み上がり続ける。</div>
+        </div>
+      </div>
+
+      <!-- Claude×EC パッケージカード -->
+      <div style="margin-top: 80px;" class="reveal">
+        <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 32px;">— ステージ3の具体像 : Claude × EC パッケージ構想</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;">
+
+          <div style="padding: 40px; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; background: rgba(255,255,255,0.03); transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(200,255,0,0.4)'; this.style.background='rgba(200,255,0,0.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.03)'">
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:40px; color:rgba(200,255,0,0.12); line-height:1; margin-bottom:4px; float:right;">01</div>
+            <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent2); margin-bottom:16px;">請求書・受発注 自動化</div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:20px; color:var(--white); margin-bottom:16px; line-height:1.35; clear:both;">Claude×請求書<br>自動処理パッケージ</div>
+            <p style="font-size:14px; color:rgba(255,255,255,0.5); line-height:1.85;">受注メール・請求書PDFをClaudeが自動読み取り→会計システムへ入力→確認依頼Slack通知まで一気通貫。担当者が承認するだけの状態をつくる。月商1,000万円以上の店舗で月30〜50時間の削減効果。</p>
+            <div style="margin-top:24px; padding:12px 16px; background:rgba(200,255,0,0.08); border-radius:4px;">
+              <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:4px; letter-spacing:0.08em; text-transform:uppercase;">想定提供形態</div>
+              <div style="font-size:14px; color:var(--accent2); font-weight:500;">月額サブスク / 従量課金</div>
+            </div>
+          </div>
+
+          <div style="padding: 40px; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; background: rgba(255,255,255,0.03); transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(200,255,0,0.4)'; this.style.background='rgba(200,255,0,0.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.03)'">
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:40px; color:rgba(200,255,0,0.12); line-height:1; margin-bottom:4px; float:right;">02</div>
+            <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent2); margin-bottom:16px;">デザイン・クリエイティブ 自動化</div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:20px; color:var(--white); margin-bottom:16px; line-height:1.35; clear:both;">Claude×デザイン<br>量産パッケージ</div>
+            <p style="font-size:14px; color:rgba(255,255,255,0.5); line-height:1.85;">商品情報を入力するとバナー・A+コンテンツ・SNS投稿画像をClaudeが自動生成・レイアウト。ブランドガイドラインに沿ったデザインを秒速で量産。制作コストを従来比1/5以下に圧縮する。</p>
+            <div style="margin-top:24px; padding:12px 16px; background:rgba(200,255,0,0.08); border-radius:4px;">
+              <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:4px; letter-spacing:0.08em; text-transform:uppercase;">想定提供形態</div>
+              <div style="font-size:14px; color:var(--accent2); font-weight:500;">制作点数課金 / 月額プラン</div>
+            </div>
+          </div>
+
+          <div style="padding: 40px; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; background: rgba(255,255,255,0.03); transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(200,255,0,0.4)'; this.style.background='rgba(200,255,0,0.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.03)'">
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:40px; color:rgba(200,255,0,0.12); line-height:1; margin-bottom:4px; float:right;">03</div>
+            <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent2); margin-bottom:16px;">CS・問い合わせ 自動化</div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:20px; color:var(--white); margin-bottom:16px; line-height:1.35; clear:both;">Claude×CS<br>自動応答パッケージ</div>
+            <p style="font-size:14px; color:rgba(255,255,255,0.5); line-height:1.85;">モール・自社ECの問い合わせをClaudeが分類・回答文生成→担当者が確認して送信。FAQ・返品ポリシー・在庫情報をClaudeに学習させ、問い合わせ対応工数を最大70%削減。休日・深夜も初期対応が止まらない。</p>
+            <div style="margin-top:24px; padding:12px 16px; background:rgba(200,255,0,0.08); border-radius:4px;">
+              <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:4px; letter-spacing:0.08em; text-transform:uppercase;">想定提供形態</div>
+              <div style="font-size:14px; color:var(--accent2); font-weight:500;">問い合わせ件数課金 / 月額プラン</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 将来候補 -->
+        <div style="margin-top: 2px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;">
+          <div style="padding: 24px 32px; border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; background: rgba(255,255,255,0.02);">
+            <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.25); margin-bottom:8px;">検討中 — 将来候補</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.45); line-height:1.8;">商品説明文の多言語自動生成 / 競合価格監視・自動アラート / 月次レポート自動作成</div>
+          </div>
+          <div style="padding: 24px 32px; border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; background: rgba(255,255,255,0.02);">
+            <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.25); margin-bottom:8px;">検討中 — 将来候補</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.45); line-height:1.8;">在庫補充タイミング自動提案 / 広告コピーA/Bテスト自動生成 / 返品理由分析レポート</div>
+          </div>
+          <div style="padding: 24px 32px; border: 1px solid rgba(200,255,0,0.15); border-radius: 4px; background: rgba(200,255,0,0.03);">
+            <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:8px;">基本方針</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.8;">Claude APIを核に、EC業務の「繰り返し発生する作業」をパッケージ化。月額課金で安定収益を積み上げながら、クライアントLTVを最大化する。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- サマリ -->
+      <div style="margin-top: 64px; padding: 48px; border: 1px solid rgba(200,255,0,0.2); border-radius: 4px; background: rgba(200,255,0,0.04);" class="reveal">
+        <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent2); margin-bottom: 20px;">— Section Summary</div>
+        <p style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 22px; color: var(--white); line-height: 1.5; letter-spacing: -0.01em;">
+          クライアントを強くするほど、当社も深く必要とされる。<br>
+          インハウス化を支援しながら、AIパッケージで新しい収益を積み上げる。<br>
+          <span style="color: var(--accent2);">「あの手この手でLTVを伸ばす」。これが当社の関係設計だ。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="ai">
+  <div class="ai-inner">
+    <div class="section-label reveal"><span class="section-num">04</span> AIネイティブ化 <span style="font-size:10px; padding:2px 8px; background:rgba(255,60,0,0.1); border-radius:2px; margin-left:8px; letter-spacing:0.06em; color:var(--accent3);">社内 → 外販を目指す</span></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: end;" class="reveal">
+      <h2 class="h2">AIを「使う」のではなく<br>AI前提で<br>業務を再設計する</h2>
+      <div>
+        <p style="font-size: 16px; color: var(--ink-muted); line-height: 1.9;">単なるツール導入ではない。業務フロー・組織プロセスをAIが動くことを前提に設計し直す「AIネイティブ企業変革」。これをサイバーレコード自身が体現し、C-Transとして顧客へ移植する。</p>
+        <div style="margin-top: 24px; padding: 16px 20px; background: rgba(200,255,0,0.08); border: 1px solid rgba(200,255,0,0.25); border-radius: 4px; display: inline-flex; align-items: center; gap: 10px;">
+          <span style="font-size: 18px;">🏗</span>
+          <p style="font-size: 13px; color: var(--ink-muted); line-height: 1.7; margin: 0;"><strong style="color: var(--ink); font-weight: 500;">業務再設計の詳細はAX本部にて検討中。</strong><br>EC本部は実装・運用の主体として連携する。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-grid reveal">
+      <div class="ai-tool">
+        <div class="ai-bar"></div>
+        <div class="ai-tool-name">Dify</div>
+        <div class="ai-tool-role">脳 — 高度推論</div>
+        <div class="ai-tool-desc">社内ナレッジのRAG化、採用候補者の自動スクリーニング、プロンプト管理を担うAIエージェント基盤。</div>
+        <div class="ai-tool-reduction">70%<span> 問合せ対応削減</span></div>
+      </div>
+      <div class="ai-tool">
+        <div class="ai-bar"></div>
+        <div class="ai-tool-name">Make.com</div>
+        <div class="ai-tool-role">手足 — 外部操作</div>
+        <div class="ai-tool-desc">DifyのAI判断を受けて、Gmail・Slack・HubSpotを自動操作。返信下書きを担当者が「送るだけ」の状態にする。</div>
+        <div class="ai-tool-reduction">〜70%<span> 事務工数削減</span></div>
+      </div>
+      <div class="ai-tool">
+        <div class="ai-bar"></div>
+        <div class="ai-tool-name">NE AI</div>
+        <div class="ai-tool-role">基幹 — バックヤード</div>
+        <div class="ai-tool-desc">「受注を検索して」とチャットするだけでネクストエンジンが動く対話型AI。在庫配分の自律提案も実現。</div>
+        <div class="ai-tool-reduction">99%<span> 受注〜出荷自動化</span></div>
+      </div>
+      <div class="ai-tool">
+        <div class="ai-bar"></div>
+        <div class="ai-tool-name">MiiTel</div>
+        <div class="ai-tool-role">会話 — 資産化</div>
+        <div class="ai-tool-desc">営業・採用面談をリアルタイム文字起こしし、要約・CRM連携・お礼メール自動生成まで完結。商談ブラックボックスを解消。</div>
+        <div class="ai-tool-reduction">0h<span> 商談後事務作業</span></div>
+      </div>
+      <div class="ai-tool">
+        <div class="ai-bar"></div>
+        <div class="ai-tool-name">Manus</div>
+        <div class="ai-tool-role">自律 — 24h稼働</div>
+        <div class="ai-tool-desc">自律的にブラウザを操作し競合価格を毎日巡回調査。要約レポートPDFをSlackへ自動投稿し、休日も情報収集が止まらない。</div>
+        <div class="ai-tool-reduction">24h<span> 自律稼働</span></div>
+      </div>
+    </div>
+
+    <div class="ai-flow reveal">
+      <div class="ai-flow-step">
+        <div class="ai-flow-tool">メール受信</div>
+        <div class="ai-flow-action">トリガー発火</div>
+      </div>
+      <div class="ai-flow-step">
+        <div class="ai-flow-tool">Make.com</div>
+        <div class="ai-flow-action">Difyへ転送</div>
+      </div>
+      <div class="ai-flow-step">
+        <div class="ai-flow-tool">Dify (RAG)</div>
+        <div class="ai-flow-action">回答文を生成</div>
+      </div>
+      <div class="ai-flow-step">
+        <div class="ai-flow-tool">HubSpot</div>
+        <div class="ai-flow-action">CRM記録</div>
+      </div>
+      <div class="ai-flow-step">
+        <div class="ai-flow-tool">Gmail下書き</div>
+        <div class="ai-flow-action">担当者が送信</div>
+      </div>
+    </div>
+
+    <!-- 省力化ターゲット数値 -->
+    <div style="margin-top: 80px;" class="reveal">
+      <div class="section-label" style="margin-bottom: 40px;"><span style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted);">— 省力化 定量目標</span></div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden;">
+        <div style="padding: 40px 32px; background: var(--ink); text-align:center;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:12px;">月間削減目標</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:48px; color:var(--accent2); line-height:1;">2,030</div>
+          <div style="font-size:14px; color:rgba(255,255,255,0.5); margin-top:6px;">時間／月</div>
+        </div>
+        <div style="padding: 40px 32px; background: var(--white); border: 1px solid var(--card-border); text-align:center;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:12px;">日換算（21日稼働）</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:48px; line-height:1;">97</div>
+          <div style="font-size:14px; color:var(--ink-muted); margin-top:6px;">時間／日</div>
+        </div>
+        <div style="padding: 40px 32px; background: var(--white); border: 1px solid var(--card-border); text-align:center;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:12px;">対象人数</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:48px; line-height:1;">45</div>
+          <div style="font-size:14px; color:var(--ink-muted); margin-top:6px;">名</div>
+        </div>
+        <div style="padding: 40px 32px; background: var(--white); border: 1px solid var(--card-border); text-align:center;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:12px;">一人あたり削減</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:48px; line-height:1; color:var(--accent3);">2.2</div>
+          <div style="font-size:14px; color:var(--ink-muted); margin-top:6px;">時間／日／人</div>
+        </div>
+      </div>
+      <div style="margin-top: 16px; padding: 24px 32px; background: var(--paper); border-radius: 4px; border-left: 3px solid var(--ink-faint);">
+        <p style="font-size:13px; color:var(--ink-muted); line-height:1.8;"><strong style="color:var(--ink); font-weight:500;">省力化の優先領域：</strong> ダッシュボード化 / 数値集計・管理表作成の自動化 / 月次・定例報告書自動化 / 各モール登録自動化（A・R・Y）/ 在庫管理自動化（Amazon）/ オファー設定自動化 / 各種ダブルチェック</p>
+      </div>
+    </div>
+
+    <!-- AI 要約メッセージ -->
+    <div style="margin-top: 64px; padding: 48px; background: var(--paper); border-left: 4px solid var(--ink); border-radius: 0 4px 4px 0;" class="reveal">
+      <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 20px;">— Section Summary</div>
+      <p style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.5; letter-spacing: -0.01em;">
+        AIは「省力化ツール」ではなく「組織のOS」だ。<br>
+        Dify・Make・NE AIを組み合わせた自動化で業務の70%を圧縮し、<br>
+        <em style="font-style: normal; color: var(--accent3);">浮いた人的リソースをすべて「高付加価値な創造業務」に向ける。</em>
+      </p>
+    </div>
+  </div>
+</section>
+
+</section>
+<section id="philosophy" style="background: var(--paper); padding: 120px 48px; border-top: 1px solid var(--card-border);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-label reveal"><span class="section-num">04.5</span> 省力化の哲学</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: end;" class="reveal">
+      <h2 class="h2">成果だけが<br>正義。プロセスは<br>語るな。</h2>
+      <p style="font-size: 16px; color: var(--ink-muted); line-height: 1.9;">AI化は「ツール導入」ではなく「仕事の基準値の引き上げ」だ。時間をかけた量ではなく、どれだけ鋭く・速く・高い成果を出したかだけを評価する。以下の10則を全員の行動規範とする。</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;" class="reveal">
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">01</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">会議は「一律30分」に固定する</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">パーキンソンの法則を逆手に取る。最初から枠を半分にするだけで、議論の密度が劇的に上がる。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">02</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">「100点」ではなく「60点」でまず出す</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">完璧主義は省力化の最大の敵。60点の段階で方向性を確認し、早めの軌道修正で手戻りを防ぐ。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">03</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">やり取りの往復を最小限にする</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">「この一通で話を完結させるには何が必要か」を考える。中身のない返信を減らし、互いの時間を守る。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">04</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">「探す時間」は無給の労働だと自覚する</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">ファイルを探している時間は1円も価値を生まない。検索1秒で済む命名規則と構造を作る。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">05</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">「2分ルール」で脳のメモリを空ける</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">2分以内に終わるタスクはその場で片付ける。「あとで」と抱えておくこと自体がエネルギーを消費する。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">06</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">「頑張り」を評価の指標から外す</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">評価すべきは「いかに少ない労力で期待以上の成果を出したか」。楽をして勝つことを正義と定義し直す。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">07</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">結論から話し、結論を促す</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">「結論は○○です。理由は3つあります」——PREP法の徹底だけで、コミュニケーションコストは半分になる。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">08</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">「自分しかできない」という思い込みを捨てる</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">「自分がいなくても回る状態」を作ることが真の省力化。マニュアル化し、他者かAIに渡す。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--card-border)'">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(10,10,10,0.04); line-height:1; margin-bottom:-8px;">09</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px;">道具を使うことを「正当な進化」と捉える</div>
+        <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">AIや最新ツールを使うのを「手抜き」と感じるのは、洗濯機を使わずに川へ行くようなもの。文明をフル活用し、人間にしかできない創造的判断に集中する。</div>
+      </div>
+      <div style="padding: 36px 40px; background: var(--ink); border: 1px solid var(--ink); border-radius: 4px;">
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; color:rgba(255,255,255,0.04); line-height:1; margin-bottom:-8px;">10</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px; margin-bottom:10px; color:var(--accent2);">昨日のやり方を「疑う」ことから始める</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.8;">「今までこうだったから」が最大のエネルギー漏れポイント。一日の終わりに「この作業、もっと短縮できなかったか？」と5分だけ振り返る。その小さな疑いが、明日の組織を確実に変える。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" style="background: var(--white); padding: 120px 48px;">
+  <div class="roadmap-inner">
+    <div class="section-label reveal"><span class="section-num">05</span> 事業成長ロードマップ</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: end;" class="reveal">
+      <h2 class="h2">BPOを起点に<br>EC・小売を<br>スケールさせる</h2>
+      <p style="font-size: 16px; color: var(--ink-muted); line-height: 1.9;">BPOで積み上げた運営力・人的資産・クライアント網を起点に、EC売上最大化と小売事業の拡大を同時に推進する。小売は自社SPAブランドの確立、M&A、そして従来の商材仕入れの3軸で展開する。</p>
+    </div>
+
+    <!-- BPO起点の事業連関図 -->
+    <div style="padding: 48px; background: var(--paper); border-radius: 4px; margin-bottom: 64px;" class="reveal">
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 32px;">— 事業の連関構造</div>
+      <div style="display: grid; grid-template-columns: 1fr 40px 1fr 40px 1fr; gap: 0; align-items: center;">
+        <div style="padding: 32px; background: var(--ink); border-radius: 4px; text-align: center;">
+          <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent2); margin-bottom: 12px;">起点</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--white); margin-bottom:12px;">BPO事業</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.55); line-height:1.8;">EC運営力・CS・受発注・物流の実行基盤。ここで磨かれた現場力が全事業の源泉。</div>
+        </div>
+        <div style="text-align:center; font-family:'Syne',sans-serif; font-weight:800; font-size:24px; color:var(--ink-faint);">→</div>
+        <div style="padding: 32px; background: var(--white); border: 2px solid var(--accent2); border-radius: 4px; text-align: center;">
+          <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px;">今期最優先</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; margin-bottom:12px;">EC事業 4億円</div>
+          <div style="font-size: 13px; color: var(--ink-muted); line-height:1.8;">運営・広告・SNS・コンサル・物流を揃え、クライアント価値最大化に完全コミット。</div>
+        </div>
+        <div style="text-align:center; font-family:'Syne',sans-serif; font-weight:800; font-size:24px; color:var(--ink-faint);">→</div>
+        <div style="padding: 32px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px; text-align: center;">
+          <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px;">スケールアップ</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; margin-bottom:12px;">小売事業</div>
+          <div style="font-size: 13px; color: var(--ink-muted); line-height:1.8;">自社SPA・M&A・商材仕入れの3軸。ECで実証済みの商材をTier管理で利益率最大化。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roadmap-steps reveal">
+      <div class="rm-step">
+        <div class="rm-dot">01</div>
+        <div class="rm-content">
+          <div class="rm-period">FY18 最優先 — BPOを起点にする理由</div>
+          <div class="rm-title">【BPOでイシューを特定する】クライアントの課題を全方位で把握する先頭打者</div>
+          <ul class="rm-items">
+            <li>BPOはEC運営の実行基盤であると同時に、クライアントのあらゆる業務イシューに最初に触れる接点だ</li>
+            <li>CS・受発注・物流・広告など各現場から課題を吸い上げ、EC・小売・AIパッケージへのエスカレーションにつなげる</li>
+            <li>「作業をこなす」から「課題を見つけて提案する」——BPOの役割定義をFY18から刷新する</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">02</div>
+        <div class="rm-content">
+          <div class="rm-period">並行推進</div>
+          <div class="rm-title">【小売スケールアップ】SPA・M&A・商材仕入れの3軸展開</div>
+          <ul class="rm-items">
+            <li>自社SPAブランド第1弾リリース — ECで売れると実証した商材を自社ブランド化</li>
+            <li>ミダスキャピタルと連携したM&A買収ターゲットの選定・実行</li>
+            <li>TIER3商材の積極開拓——月商100万円〜の売れているが小規模なブランドを掛け率40%で取り込む</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">03</div>
+        <div class="rm-content">
+          <div class="rm-period">来期以降</div>
+          <div class="rm-title">【インハウス支援×AIパッケージ】クライアントLTVの継続最大化</div>
+          <ul class="rm-items">
+            <li>EC自走支援（Wiki・OJT・BIダッシュボード）をサービスとして体系化・提供開始</li>
+            <li>Claude×ECパッケージ（請求書・デザイン・CS自動化）の順次リリース</li>
+            <li>インハウス化後も新パッケージを当て続け、クライアントとの関係を深める</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">04</div>
+        <div class="rm-content" style="border-color: var(--ink);">
+          <div class="rm-period">中長期 — 上場フェーズ</div>
+          <div class="rm-title">【ロールアップと上場】M&A実行・IPO目論見書の完成</div>
+          <ul class="rm-items">
+            <li>地方D2C企業をM&A買収。BPOリソースをフル投入し前年比300%超へグロース</li>
+            <li>「地域価値共創イネーブラー」ストーリーでプレミアム時価総額での上場を目指す（時期は状況に応じて判断）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap 要約メッセージ -->
+    <div style="margin-top: 64px; padding: 48px; background: var(--paper); border-left: 4px solid var(--accent3); border-radius: 0 4px 4px 0;" class="reveal">
+      <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent3); margin-bottom: 20px;">— Section Summary</div>
+      <p style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.5; letter-spacing: -0.01em;">
+        BPOで磨いた実行力を武器に、ECと小売を同時にスケールさせる。<br>
+        戦略は語るものではなく、今日から動くものだ。<br>
+        <em style="font-style: normal; color: var(--accent3);">このキックオフを機に、全員が数字で証明する当事者になれ。</em>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- RETAIL TIER SECTION -->
+<section id="retail" style="background: var(--paper); padding: 120px 48px; border-top: 1px solid var(--card-border);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-label reveal"><span class="section-num">05.5</span> 小売事業 — Tier戦略と1社依存脱却</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: end;" class="reveal">
+      <h2 class="h2">1社依存を<br>今期中に<br>壊す。</h2>
+      <div>
+        <p style="font-size: 16px; color: var(--ink-muted); line-height: 1.9;">現状、小売事業の売上は1社のクライアントに約90%が集中している。その1社が解約すれば6億円規模の売上が消失する。この構造的リスクを解消するため、Tier別の掛け率管理を軸に商材・取引先を分散させる。</p>
+        <div style="margin-top: 24px; padding: 20px 24px; background: rgba(255,60,0,0.06); border: 1px solid rgba(255,60,0,0.2); border-radius: 4px;">
+          <div style="font-size: 13px; color: var(--ink); line-height: 1.8;"><strong style="color: var(--accent3); font-weight: 600;">⚠ 最重要リスク：</strong> 売上の約90%が1社依存。顧客都合の解約が発生した場合、<strong style="font-weight: 600;">6億円規模の売上が即時消失</strong>する。Tier分散は今期中に着手必須。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 小売3軸 -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 64px;" class="reveal">
+      <div style="padding: 40px; background: var(--ink); border-radius: 4px;">
+        <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent2); margin-bottom: 16px;">小売 軸 01</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--white); margin-bottom:16px; line-height:1.3;">自社SPA<br>ブランド確立</div>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.85;">ECで「売れる」と実証された商材を自社ブランド化。在庫・マージン・ブランド価値を自社でコントロールし、利益率の高い収益構造をつくる。</p>
+      </div>
+      <div style="padding: 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px;">
+        <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 16px;">小売 軸 02</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; margin-bottom:16px; line-height:1.3;">M&A<br>ロールアップ</div>
+        <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.85;">ミダスキャピタルと連携し、地方D2Cブランドを戦略的に買収。BPOリソースを注入して売上を一気に拡大する。買収→育成→次の買収の循環を回す。</p>
+      </div>
+      <div style="padding: 40px; background: var(--white); border: 1px solid var(--card-border); border-radius: 4px;">
+        <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 16px;">小売 軸 03</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; margin-bottom:16px; line-height:1.3;">従来の商材仕入れ<br>Tier管理で高度化</div>
+        <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.85;">既存の仕入れ転売モデルをTier別掛け率で再設計。在庫リスクを最小化しながら、これまで狙えていなかったTIER3の月商100万円〜商材を積極的に獲得する。</p>
+      </div>
+    </div>
+
+    <!-- Tier掛け率テーブル -->
+    <div class="reveal">
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 32px;">— 商材Tier別 掛け率・在庫リスク管理表</div>
+
+      <!-- テーブルヘッダー -->
+      <div style="display: grid; grid-template-columns: 80px 60px 1fr 100px 80px 1fr 120px; gap: 1px; background: var(--ink); border-radius: 4px 4px 0 0; overflow: hidden;">
+        <div style="padding: 14px 16px; background: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Tier</div>
+        <div style="padding: 14px 16px; background: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5);">ランク</div>
+        <div style="padding: 14px 16px; background: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5);">ステータス</div>
+        <div style="padding: 14px 16px; background: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Amazon月商</div>
+        <div style="padding: 14px 16px; background: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5);">掛け率</div>
+        <div style="padding: 14px 16px; background: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5);">在庫所有 / リスク</div>
+        <div style="padding: 14px 16px; background: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5);">参考事例</div>
+      </div>
+
+      <!-- TIER 1 -->
+      <div style="display: grid; grid-template-columns: 80px 60px 1fr 100px 80px 1fr 120px; gap: 1px; background: var(--card-border); border-left: 1px solid var(--card-border); border-right: 1px solid var(--card-border);">
+        <div style="padding: 20px 16px; background: var(--white); font-family:'Syne',sans-serif; font-weight:700; font-size:13px;">TIER 1</div>
+        <div style="padding: 20px 16px; background: var(--white);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:18px; color:var(--accent2);">S</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 14px;">かなり売れている</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">5,000万円〜</div>
+        <div style="padding: 20px 16px; background: var(--paper);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:20px; color:var(--ink);">65%</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">当社仕入れ / リスク：低〜中</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">久原本家</div>
+      </div>
+
+      <!-- TIER 2A -->
+      <div style="display: grid; grid-template-columns: 80px 60px 1fr 100px 80px 1fr 120px; gap: 1px; background: var(--card-border); border-left: 1px solid var(--card-border); border-right: 1px solid var(--card-border);">
+        <div style="padding: 20px 16px; background: var(--white); font-family:'Syne',sans-serif; font-weight:700; font-size:13px;">TIER 2</div>
+        <div style="padding: 20px 16px; background: var(--white);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:18px; color:var(--ink);">A</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 14px;">売れている</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">1,000万円〜</div>
+        <div style="padding: 20px 16px; background: var(--paper);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:20px; color:var(--ink);">60%</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">当社仕入れ / リスク：中</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">リドリム（当初）</div>
+      </div>
+
+      <!-- TIER 2B -->
+      <div style="display: grid; grid-template-columns: 80px 60px 1fr 100px 80px 1fr 120px; gap: 1px; background: var(--card-border); border-left: 1px solid var(--card-border); border-right: 1px solid var(--card-border);">
+        <div style="padding: 20px 16px; background: var(--white); font-family:'Syne',sans-serif; font-weight:700; font-size:13px;">TIER 2</div>
+        <div style="padding: 20px 16px; background: var(--white);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:18px; color:var(--ink);">B</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 14px;">売れている（中規模）</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">500万円〜</div>
+        <div style="padding: 20px 16px; background: var(--paper);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:20px; color:var(--ink);">50%</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">当社仕入れ（小ロット）/ リスク：中</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-muted);">うちのや</div>
+      </div>
+
+      <!-- TIER 3 ハイライト -->
+      <div style="display: grid; grid-template-columns: 80px 60px 1fr 100px 80px 1fr 120px; gap: 1px; background: rgba(200,255,0,0.4); border-left: 3px solid var(--accent2); border-right: 1px solid var(--card-border);">
+        <div style="padding: 20px 16px; background: rgba(200,255,0,0.08); font-family:'Syne',sans-serif; font-weight:700; font-size:13px;">TIER 3<br><span style="font-size:10px; color:var(--accent3); font-family:'Noto Sans JP',sans-serif;">★ 今期注力</span></div>
+        <div style="padding: 20px 16px; background: rgba(200,255,0,0.08);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:18px; color:var(--accent3);">C</span></div>
+        <div style="padding: 20px 16px; background: rgba(200,255,0,0.08); font-size: 14px; font-weight: 500;">売れているが小規模<br><span style="font-size:12px; font-weight:400; color:var(--ink-muted);">← 狙えていないボリュームゾーン</span></div>
+        <div style="padding: 20px 16px; background: rgba(200,255,0,0.08); font-size: 13px; color: var(--ink-muted);">100万円〜</div>
+        <div style="padding: 20px 16px; background: rgba(200,255,0,0.15);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:20px; color:var(--ink);">40%</span></div>
+        <div style="padding: 20px 16px; background: rgba(200,255,0,0.08); font-size: 13px; color: var(--ink-muted);">メーカー在庫 / リスク：ゼロ</div>
+        <div style="padding: 20px 16px; background: rgba(200,255,0,0.08); font-size: 13px; color: var(--ink-muted);">リドリム（現在）・5C</div>
+      </div>
+
+      <!-- TIER 4 -->
+      <div style="display: grid; grid-template-columns: 80px 60px 1fr 100px 80px 1fr 120px; gap: 1px; background: var(--card-border); border-left: 1px solid var(--card-border); border-right: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); border-radius: 0 0 4px 4px; overflow: hidden;">
+        <div style="padding: 20px 16px; background: var(--white); font-family:'Syne',sans-serif; font-weight:700; font-size:13px; color:var(--ink-faint);">TIER 4</div>
+        <div style="padding: 20px 16px; background: var(--white);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:18px; color:var(--ink-faint);">D</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 14px; color: var(--ink-muted);">売れていない / リハビリ対象</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-faint);">100万円未満</div>
+        <div style="padding: 20px 16px; background: var(--paper);"><span style="font-family:'Syne',sans-serif; font-weight:800; font-size:16px; color:var(--ink-faint);">対象外</span></div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-faint);">メーカー在庫 / リスク：ゼロ</div>
+        <div style="padding: 20px 16px; background: var(--white); font-size: 13px; color: var(--ink-faint);">EC運営代行で対応</div>
+      </div>
+    </div>
+
+    <!-- 掛け率調整の意図説明 -->
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px;" class="reveal">
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-left: 3px solid var(--accent2); border-radius: 0 4px 4px 0;">
+        <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px;">— なぜ今、掛け率をTier管理するのか</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:18px; margin-bottom:12px; line-height:1.4;">在庫リスクを抑えながら<br>ボリュームゾーンを獲りに行く</div>
+        <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.85;">TIER3（月商100万円〜）は、売れているが小規模なため当社が手を付けてこなかったゾーンだ。しかし、メーカー在庫で当社リスクはゼロ。掛け率40%でも数を集めれば大きな売上になる。代理店からの案件発掘を加速し、このゾーンを今期の獲得ターゲットに設定する。</p>
+      </div>
+      <div style="padding: 36px 40px; background: var(--white); border: 1px solid var(--card-border); border-left: 3px solid var(--accent3); border-radius: 0 4px 4px 0;">
+        <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent3); margin-bottom: 12px;">— EC→小売のカニバリ問題</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:18px; margin-bottom:12px; line-height:1.4;">カニバリは議論しない。<br>エスカレーションを仕組み化する。</div>
+        <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.85;">EC運営で育てたクライアントが小売事業に移行する際、担当者のKPIが下がる問題がある。明確な線引きよりも、「ECから小売への移行をスムーズにする仕組み」を優先する。個人KPIへの影響を緩和するルール設計を今期中に整備する。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IPO TARGET -->
+<section class="full-width" id="ipo">
+  <div class="ipo-section">
+    <div class="ipo-inner">
+      <div class="ipo-bg">IPO</div>
+      <div class="section-label reveal"><span class="section-num" style="color: var(--accent2);">06</span> 経営マイルストーン</div>
+      <h2 class="h2 reveal" style="color: var(--white);">上場を目指す。<br>2031年、1,000億円。<br>北極星への地図。</h2>
+
+      <div class="ipo-metrics reveal">
+        <div class="ipo-metric">
+          <div class="ipo-metric-year">目標時期 調整中</div>
+          <div class="ipo-metric-num">IPO<span> 目指す</span></div>
+          <div class="ipo-metric-label">東証上場 — 時期・条件は状況に応じて判断</div>
+        </div>
+        <div class="ipo-metric">
+          <div class="ipo-metric-year">2029年</div>
+          <div class="ipo-metric-num">100<span>億円</span></div>
+          <div class="ipo-metric-label">売上高達成目標 — SPA＋M&Aロールアップが主エンジン</div>
+        </div>
+        <div class="ipo-metric">
+          <div class="ipo-metric-year">2031年</div>
+          <div class="ipo-metric-num">1,000<span>億円</span></div>
+          <div class="ipo-metric-label">時価総額達成目標 — プレミアムPERで評価される企業へ</div>
+        </div>
+      </div>
+
+      <div class="ipo-story reveal">
+        <div>
+          <div class="ipo-story-title">投資家ストーリー</div>
+          <div class="ipo-story-sub">なぜサイバーレコードが<br>プレミアム評価を受けるのか</div>
+        </div>
+        <div class="ipo-story-text">
+          単なるEC運営代行・ふるさと納税の作業代行会社ではない。<strong style="color: var(--white); font-weight: 500;">「地方創生（地域資源の発掘）と大企業のDX（内製化・CSV活動）を、Eコマースという共通言語で繋ぎ、一般流通に新たな巨大市場を創出する、唯一無二の地域価値共創イネーブラー」</strong>として、競合がまったく存在しないカテゴリーでPERプレミアムがつく。ミダスキャピタルの資本力・電通ダイレクト連携・地域6,000社ネットワーク。この3つは買うことも真似することもできない、最強の参入障壁だ。
+        </div>
+      </div>
+
+      <!-- IPO 要約メッセージ -->
+      <div style="margin-top: 64px; padding: 48px; border: 1px solid rgba(200,255,0,0.2); border-radius: 4px; background: rgba(200,255,0,0.04);" class="reveal">
+        <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent2); margin-bottom: 20px;">— Section Summary</div>
+        <p style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 22px; color: var(--white); line-height: 1.5; letter-spacing: -0.01em;">
+          1,000億円の時価総額は、描ける未来だ。<br>
+          新カテゴリーをつくり、そのカテゴリーで圧倒的No.1になる。<br>
+          <span style="color: var(--accent2);">「地域価値共創」という言葉が、サイバーレコードの代名詞になる日が来る。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORG CHART SECTION -->
+<section id="org" style="background: var(--white); padding: 120px 48px; border-top: 1px solid var(--card-border);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-label reveal"><span class="section-num" style="color:var(--accent3);">※確定作業中</span> 組織図発表</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; margin-bottom:64px; align-items:end;" class="reveal">
+      <h2 class="h2">コマース事業本部<br>FY18<br>組織体制</h2>
+      <p style="font-size:16px; color:var(--ink-muted); line-height:1.9;">BPOを起点としたEC・小売スケールアップを実現する組織体制。各部・各グループの役割と権限を明確にし、全員が事業の当事者として動ける構造をつくる。</p>
+    </div>
+
+    <!-- 本部長・副本部長 -->
+    <div class="reveal" style="display:flex; justify-content:center; gap:2px; margin-bottom:2px;">
+      <div style="padding:28px 56px; background:var(--ink); border-radius:4px; text-align:center;">
+        <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:8px;">コマース事業本部長</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--white); margin-bottom:2px;">平澤 誠</div>
+      </div>
+      <div style="padding:28px 56px; background:rgba(10,10,10,0.85); border-radius:4px; text-align:center;">
+        <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:8px;">副本部長</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--white); margin-bottom:2px;">梅本 哲也</div>
+      </div>
+    </div>
+
+    <!-- 縦線 -->
+    <div style="display:flex; justify-content:center;">
+      <div style="width:1px; height:40px; background:var(--card-border);"></div>
+    </div>
+
+    <!-- 4部署 -->
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:2px;" class="reveal">
+
+      <!-- ソリューションビジネス部 -->
+      <div style="border:1px solid var(--card-border); border-top:3px solid var(--accent2); border-radius:0 0 4px 4px; background:var(--white); overflow:hidden;">
+        <div style="padding:24px 20px; border-bottom:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:6px;">部</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; margin-bottom:4px;">ソリューションビジネス部</div>
+          <div style="font-size:11px; color:var(--ink-muted);">部長：山口 史</div>
+        </div>
+        <div style="padding:16px 20px; display:flex; flex-direction:column; gap:8px;">
+          <div style="padding:10px 14px; background:var(--paper); border-radius:3px;">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">セールスG</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">ECソリューション / インサイドセールス / ローカルアライアンス</div>
+          </div>
+          <div style="padding:10px 14px; background:var(--paper); border-radius:3px;">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">プロセスソリューションG</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">BPOアシスタント・IS・人材チーム</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ソリューションプランニング第一部 -->
+      <div style="border:1px solid var(--card-border); border-top:3px solid var(--accent2); border-radius:0 0 4px 4px; background:var(--white); overflow:hidden;">
+        <div style="padding:24px 20px; border-bottom:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:6px;">部</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; margin-bottom:4px;">ソリューション<br>プランニング第一部</div>
+          <div style="font-size:11px; color:var(--ink-muted);">部長：巣山 祐司</div>
+        </div>
+        <div style="padding:16px 20px; display:flex; flex-direction:column; gap:8px;">
+          <div style="padding:10px 14px; background:var(--paper); border-radius:3px;">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">第一プランニングG</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">既存顧客へのストラテジックプランニング</div>
+          </div>
+          <div style="padding:10px 14px; background:var(--paper); border-radius:3px;">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">デザインG</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">EC運用代行に係るクリエイティブ制作</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ソリューションプランニング第二部 -->
+      <div style="border:1px solid var(--card-border); border-top:3px solid var(--accent2); border-radius:0 0 4px 4px; background:var(--white); overflow:hidden;">
+        <div style="padding:24px 20px; border-bottom:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:6px;">部</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; margin-bottom:4px;">ソリューション<br>プランニング第二部</div>
+          <div style="font-size:11px; color:var(--ink-muted);">部長：合志 祐哉</div>
+        </div>
+        <div style="padding:16px 20px; display:flex; flex-direction:column; gap:8px;">
+          <div style="padding:10px 14px; background:var(--paper); border-radius:3px;">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">第二プランニングG</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">既存顧客へのストラテジックプランニング</div>
+          </div>
+          <div style="padding:10px 14px; background:var(--paper); border-radius:3px;">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">広報・PRG</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">リリース制作・配信・メディアプロモート</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- リテールビジネス部 -->
+      <div style="border:1px solid var(--card-border); border-top:3px solid var(--accent3); border-radius:0 0 4px 4px; background:var(--white); overflow:hidden;">
+        <div style="padding:24px 20px; border-bottom:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent3); margin-bottom:6px;">部 — 小売スケール軸</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; margin-bottom:4px;">リテールビジネス部</div>
+          <div style="font-size:11px; color:var(--ink-muted);">部長：櫻木 要</div>
+        </div>
+        <div style="padding:16px 20px; display:flex; flex-direction:column; gap:8px;">
+          <div style="padding:10px 14px; background:rgba(255,60,0,0.04); border-radius:3px; border-left:2px solid var(--accent3);">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">PB/BASE事業チーム（株式会社5C）</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">ふるさと納税事業（PB商品企画・BASE運用）</div>
+          </div>
+          <div style="padding:10px 14px; background:rgba(255,60,0,0.04); border-radius:3px; border-left:2px solid var(--accent3);">
+            <div style="font-size:11px; font-weight:500; margin-bottom:3px;">小売事業チーム</div>
+            <div style="font-size:11px; color:var(--ink-muted); line-height:1.6;">EC小売事業（ブランディングプラン）・Tier別商材管理</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:40px; padding:24px 32px; background:rgba(255,60,0,0.04); border:1px solid rgba(255,60,0,0.15); border-radius:4px;" class="reveal">
+      <p style="font-size:13px; color:var(--ink-muted); line-height:1.8;"><strong style="color:var(--accent3);">※この組織図は現在確定作業中です。</strong> 部長・副部長以下の人員配置・昇格・異動の詳細は別途ミーティングにて共有します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES SECTION -->
+<section id="roles" style="background: var(--paper); padding: 120px 48px; border-top: 1px solid var(--card-border);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-label reveal"><span class="section-num" style="color:var(--accent3);">※各責任者検討中</span> 組織の役割発表</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; margin-bottom:48px; align-items:end;" class="reveal">
+      <h2 class="h2">各部署の<br>ミッションと<br>存在意義</h2>
+      <div>
+        <p style="font-size:16px; color:var(--ink-muted); line-height:1.9;">部署の名前ではなく、「何のために存在するか」を定義する。以下はたたき台。<strong style="color:var(--ink); font-weight:500;">ミッション・KPIの詳細は各部長が責任を持って肉付けし、確定させる。</strong></p>
+        <div style="margin-top:20px; padding:16px 20px; background:rgba(255,60,0,0.05); border:1px solid rgba(255,60,0,0.2); border-radius:4px;">
+          <p style="font-size:13px; color:var(--ink-muted); line-height:1.7;"><strong style="color:var(--accent3);">※ミッション・KPIは各責任者が検討中です。</strong> 正式版は全体MTGにて発表します。</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:2px;" class="reveal">
+
+      <!-- ソリューションビジネス部 -->
+      <div style="display:grid; grid-template-columns:200px 1fr 1fr; gap:0; border:1px solid var(--card-border); border-radius:4px; overflow:hidden; background:var(--white);">
+        <div style="padding:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; text-align:center;">
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; color:var(--accent2); letter-spacing:0.04em; line-height:1.5;">ソリューション<br>ビジネス部</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.35); margin-top:6px;">部長：山口 史</div>
+          </div>
+        </div>
+        <div style="padding:32px; border-right:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">ミッション（検討中）</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; line-height:1.5; margin-bottom:8px; color:var(--ink-faint);">— 山口部長が定義予定 —</div>
+          <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">セールス（新規開拓・IS・ローカルアライアンス）とBPO・プロセスソリューションを束ねる部署。事業の入口と実行基盤を担う。</div>
+        </div>
+        <div style="padding:32px;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">今期KPI（各部長が設定）</div>
+          <div style="font-size:13px; color:var(--ink-faint); line-height:1.8; font-style:italic;">— 検討中 —</div>
+        </div>
+      </div>
+
+      <!-- ソリューションプランニング第一部 -->
+      <div style="display:grid; grid-template-columns:200px 1fr 1fr; gap:0; border:1px solid var(--card-border); border-radius:4px; overflow:hidden; background:var(--white);">
+        <div style="padding:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; text-align:center;">
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; color:var(--accent2); letter-spacing:0.04em; line-height:1.5;">ソリューション<br>プランニング<br>第一部</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.35); margin-top:6px;">部長：巣山 祐司</div>
+          </div>
+        </div>
+        <div style="padding:32px; border-right:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">ミッション（検討中）</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; line-height:1.5; margin-bottom:8px; color:var(--ink-faint);">— 巣山部長が定義予定 —</div>
+          <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">既存クライアントへのストラテジックプランニングとクリエイティブ制作を担う。クライアントの売上最大化を現場で実行する中核部署。</div>
+        </div>
+        <div style="padding:32px;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">今期KPI（各部長が設定）</div>
+          <div style="font-size:13px; color:var(--ink-faint); line-height:1.8; font-style:italic;">— 検討中 —</div>
+        </div>
+      </div>
+
+      <!-- ソリューションプランニング第二部 -->
+      <div style="display:grid; grid-template-columns:200px 1fr 1fr; gap:0; border:1px solid var(--card-border); border-radius:4px; overflow:hidden; background:var(--white);">
+        <div style="padding:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; text-align:center;">
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; color:var(--accent2); letter-spacing:0.04em; line-height:1.5;">ソリューション<br>プランニング<br>第二部</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.35); margin-top:6px;">部長：合志 祐哉</div>
+          </div>
+        </div>
+        <div style="padding:32px; border-right:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">ミッション（検討中）</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; line-height:1.5; margin-bottom:8px; color:var(--ink-faint);">— 合志部長が定義予定 —</div>
+          <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">既存クライアントへのストラテジックプランニングと広報・PRを担う。ブランドの文脈をつくり、露出を最大化する役割。</div>
+        </div>
+        <div style="padding:32px;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">今期KPI（各部長が設定）</div>
+          <div style="font-size:13px; color:var(--ink-faint); line-height:1.8; font-style:italic;">— 検討中 —</div>
+        </div>
+      </div>
+
+      <!-- リテールビジネス部 -->
+      <div style="display:grid; grid-template-columns:200px 1fr 1fr; gap:0; border:1px solid var(--card-border); border-top:2px solid var(--accent3); border-radius:4px; overflow:hidden; background:var(--white);">
+        <div style="padding:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; text-align:center;">
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:13px; color:var(--accent3); letter-spacing:0.04em; line-height:1.5;">リテール<br>ビジネス部</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.35); margin-top:6px;">部長：櫻木 要</div>
+            <div style="font-size:10px; color:var(--accent3); margin-top:4px;">★ 小売スケール軸</div>
+          </div>
+        </div>
+        <div style="padding:32px; border-right:1px solid var(--card-border);">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent3); margin-bottom:10px;">ミッション（検討中）</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:15px; line-height:1.5; margin-bottom:8px; color:var(--ink-faint);">— 櫻木部長が定義予定 —</div>
+          <div style="font-size:13px; color:var(--ink-muted); line-height:1.8;">SPA・M&A・商材仕入れ（Tier管理）の3軸で小売事業をスケールさせる。ふるさと納税PBブランドと小売EC事業を両輪で推進。1社依存からの脱却を数値で証明する。</div>
+        </div>
+        <div style="padding:32px;">
+          <div style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px;">今期KPI（各部長が設定）</div>
+          <div style="font-size:13px; color:var(--ink-faint); line-height:1.8; font-style:italic;">— 検討中 —</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TACTICS SECTION -->
+<section id="tactics" style="background: var(--white); padding: 120px 48px; border-top: 1px solid var(--card-border);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-label reveal"><span class="section-num" style="color:var(--accent3);">※仮</span> 各部の戦術</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; margin-bottom:48px; align-items:end;" class="reveal">
+      <h2 class="h2">今期、各部が<br>具体的に何をするか</h2>
+      <div>
+        <p style="font-size:16px; color:var(--ink-muted); line-height:1.9;">戦略は語るものではなく、実行するものだ。各部署が今期の四半期単位で何を優先し、どう動くかを定義する。<strong style="color:var(--ink); font-weight:500;">以下はたたき台。各部長が責任を持って肉付けする。</strong></p>
+        <div style="margin-top:20px; padding:16px 20px; background:rgba(255,60,0,0.05); border:1px solid rgba(255,60,0,0.2); border-radius:4px;">
+          <p style="font-size:13px; color:var(--ink-muted); line-height:1.7;"><strong style="color:var(--accent3);">※各部の戦術詳細は各責任者が検討中です。</strong> 月次MTGにて進捗を共有してください。</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:2px;" class="reveal">
+
+      <!-- ソリューションビジネス部 戦術 -->
+      <div style="padding:40px; border:1px solid var(--card-border); border-radius:4px; background:var(--white);">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:28px;">
+          <div style="width:44px; height:44px; background:var(--ink); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:11px; color:var(--accent2); flex-shrink:0; text-align:center; line-height:1.2;">SB</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px;">ソリューションビジネス部</div>
+            <div style="font-size:11px; color:var(--ink-muted); letter-spacing:0.06em;">部長：山口 史 / FY2027/8〜2028/7</div>
+          </div>
+        </div>
+        <div style="padding:20px; background:var(--paper); border-radius:4px; border-left:3px solid var(--ink-faint); text-align:center;">
+          <div style="font-size:13px; color:var(--ink-faint); font-style:italic; margin-bottom:8px;">— 各Qの戦術は山口部長が定義予定 —</div>
+          <div style="font-size:12px; color:var(--ink-muted); line-height:1.8;">新規顧客開拓（EC・IS・ローカルアライアンス）/ BPOオペレーション / プロセスソリューションの各チームを統括。セールスと実行基盤の両輪を回す。</div>
+        </div>
+      </div>
+
+      <!-- ソリューションプランニング第一部 戦術 -->
+      <div style="padding:40px; border:1px solid var(--card-border); border-radius:4px; background:var(--white);">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:28px;">
+          <div style="width:44px; height:44px; background:var(--ink); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:11px; color:var(--accent2); flex-shrink:0; text-align:center; line-height:1.2;">P1</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px;">ソリューションプランニング第一部</div>
+            <div style="font-size:11px; color:var(--ink-muted); letter-spacing:0.06em;">部長：巣山 祐司 / FY2027/8〜2028/7</div>
+          </div>
+        </div>
+        <div style="padding:20px; background:var(--paper); border-radius:4px; border-left:3px solid var(--ink-faint); text-align:center;">
+          <div style="font-size:13px; color:var(--ink-faint); font-style:italic; margin-bottom:8px;">— 各Qの戦術は巣山部長が定義予定 —</div>
+          <div style="font-size:12px; color:var(--ink-muted); line-height:1.8;">既存クライアントのプランニング（第一・デザインG）を担当。クライアント売上最大化の現場実行部隊として、数値で成果を出す。</div>
+        </div>
+      </div>
+
+      <!-- ソリューションプランニング第二部 戦術 -->
+      <div style="padding:40px; border:1px solid var(--card-border); border-radius:4px; background:var(--white);">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:28px;">
+          <div style="width:44px; height:44px; background:var(--ink); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:11px; color:var(--accent2); flex-shrink:0; text-align:center; line-height:1.2;">P2</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px;">ソリューションプランニング第二部</div>
+            <div style="font-size:11px; color:var(--ink-muted); letter-spacing:0.06em;">部長：合志 祐哉 / FY2027/8〜2028/7</div>
+          </div>
+        </div>
+        <div style="padding:20px; background:var(--paper); border-radius:4px; border-left:3px solid var(--ink-faint); text-align:center;">
+          <div style="font-size:13px; color:var(--ink-faint); font-style:italic; margin-bottom:8px;">— 各Qの戦術は合志部長が定義予定 —</div>
+          <div style="font-size:12px; color:var(--ink-muted); line-height:1.8;">既存クライアントのプランニングと広報・PRを担当。ブランドの文脈をつくり、メディア露出とクライアントの認知拡大を最大化する。</div>
+        </div>
+      </div>
+
+      <!-- リテールビジネス部 戦術 -->
+      <div style="padding:40px; border:2px solid var(--accent3); border-radius:4px; background:var(--white); position:relative;">
+        <div style="position:absolute; top:16px; right:16px; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent3); background:rgba(255,60,0,0.06); padding:4px 10px; border-radius:2px; border:1px solid rgba(255,60,0,0.2);">★ 小売スケール軸</div>
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:28px;">
+          <div style="width:44px; height:44px; background:var(--accent3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:11px; color:var(--white); flex-shrink:0; text-align:center; line-height:1.2;">RB</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:17px;">リテールビジネス部</div>
+            <div style="font-size:11px; color:var(--ink-muted); letter-spacing:0.06em;">部長：櫻木 要 / FY2027/8〜2028/7</div>
+          </div>
+        </div>
+        <div style="padding:20px; background:rgba(255,60,0,0.04); border-radius:4px; border-left:3px solid var(--accent3); text-align:center;">
+          <div style="font-size:13px; color:var(--ink-faint); font-style:italic; margin-bottom:8px;">— 各Qの戦術は櫻木部長が定義予定 —</div>
+          <div style="font-size:12px; color:var(--ink-muted); line-height:1.8;">SPA・M&A・Tier別商材仕入れの3軸で小売をスケールさせる。1社依存からの脱却を数値で証明するのがこの部署の使命。PB/BASEチームと小売事業チームを両輪で推進。</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:40px; padding:24px 32px; background:rgba(255,60,0,0.04); border:1px solid rgba(255,60,0,0.15); border-radius:4px;" class="reveal">
+      <p style="font-size:13px; color:var(--ink-muted); line-height:1.8;"><strong style="color:var(--accent3);">※各部の戦術詳細は各責任者が検討中です。</strong> 各部長・グループ長が肉付けし、月次MTGで進捗を共有してください。KPIの数値目標は全体MTGにて確定します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL MESSAGE -->
+<section class="full-width">
+  <div class="message-section">
+    <div class="message-inner">
+      <div class="section-label reveal"><span class="section-num">07</span> キックオフ・メッセージ</div>
+
+      <div class="message-quote reveal">
+        「作業者」を卒業し、<br>
+        <em>「事業の設計者」</em>になれ。<br>
+        熊本から日本を変える、<br>
+        第2の創業が始まる。
+      </div>
+
+      <div class="message-bullets reveal">
+        <div class="mb-item">
+          <div class="mb-num">01</div>
+          <div class="mb-title">EC事業本部は更に重要なミッションを背負う</div>
+          <div class="mb-text">EC事業本部は、クライアントの売上最大化にとどまらず、小売・物流・AI・インハウス支援まで——全方位でクライアントと市場の課題に向き合う組織に進化する。</div>
+        </div>
+        <div class="mb-item">
+          <div class="mb-num">02</div>
+          <div class="mb-title">地域ネットワークは最強の武器</div>
+          <div class="mb-text">6,000社・2万商品は誰も持っていない。ふるさと納税で培ったリレーションを、一般流通という次のステージに引き上げる。</div>
+        </div>
+        <div class="mb-item">
+          <div class="mb-num">03</div>
+          <div class="mb-title">上場を共通の北極星に</div>
+          <div class="mb-text">上場という大きな目標を北極星に、全員が事業の当事者として動く。時期や条件は状況に応じて判断するが、その方向性に向かって今日から動き出すことに変わりはない。</div>
+        </div>
+      </div>
+
+      <div class="message-cta reveal">
+        <div class="message-cta-bg">WIN</div>
+        <h2>地域創生×EC×DX。<br><span>唯一無二の領域を、全員で切り拓け。</span></h2>
+        <p>株式会社サイバーレコード EC本部 — 2025 Kickoff</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>CyberRecord Inc.</strong>
+  <span>EC本部 キックオフ資料 — 社外秘 / 2025</span>
+  <span>熊本本社 ／ 東京本社（港区浜松町）</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
