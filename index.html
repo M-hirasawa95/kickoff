@@ -1813,20 +1813,41 @@
       <p style="font-size:16px; color:var(--ink-muted); line-height:1.9;">BPOを起点としたEC・小売スケールアップを実現する組織体制。各部・各グループの役割と権限を明確にし、全員が事業の当事者として動ける構造をつくる。</p>
     </div>
 
-    <!-- 本部長・副本部長 -->
-    <div class="reveal" style="display:flex; justify-content:center; gap:2px; margin-bottom:2px;">
-      <div style="padding:28px 64px; background:var(--ink); border-radius:4px; text-align:center;">
-        <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:8px;">コマース事業本部長</div>
-        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:24px; color:var(--white); letter-spacing:-0.01em;">平澤 誠</div>
+    <!-- コマース事業本部 + 本部長・副本部長 -->
+    <div class="reveal">
+      <div style="background:var(--ink); border-top:4px solid var(--accent2); border-radius:4px 4px 0 0; padding:36px 56px; display:flex; align-items:center; justify-content:space-between; gap:48px;">
+        <!-- 左：本部名（主役） -->
+        <div>
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent2); margin-bottom:10px; font-weight:600;">本部</div>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(28px,3vw,44px); color:var(--white); letter-spacing:-0.02em; line-height:1.1;">コマース事業本部</div>
+        </div>
+        <!-- 右：本部長・副本部長 -->
+        <div style="display:flex; gap:0; flex-shrink:0; border:1px solid rgba(255,255,255,0.12); border-radius:4px; overflow:hidden;">
+          <div style="padding:14px 28px; text-align:center; border-right:1px solid rgba(255,255,255,0.12);">
+            <div style="font-size:11px; letter-spacing:0.08em; color:var(--white); margin-bottom:6px; font-weight:500;">本部長</div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:18px; color:var(--white);">平澤 誠</div>
+          </div>
+          <div style="padding:14px 28px; text-align:center;">
+            <div style="font-size:11px; letter-spacing:0.08em; color:var(--white); margin-bottom:6px; font-weight:500;">副本部長</div>
+            <div style="font-family:'Syne',sans-serif; font-weight:700; font-size:18px; color:var(--white);">梅本 哲也</div>
+          </div>
+        </div>
       </div>
-      <div style="padding:28px 64px; background:rgba(10,10,10,0.85); border-radius:4px; text-align:center;">
-        <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:8px;">副本部長</div>
-        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:24px; color:var(--white); letter-spacing:-0.01em;">梅本 哲也</div>
-      </div>
-    </div>
 
-    <!-- 縦線 -->
-    <div style="display:flex; justify-content:center; align-items:center; padding:12px 0; color:var(--ink-faint); font-size:13px; letter-spacing:0.08em;">↓ 各部署</div>
+      <!-- 接続ブリッジ：SVGで正確に描画 -->
+      <svg width="100%" height="40" viewBox="0 0 1000 40" preserveAspectRatio="none" style="display:block;">
+        <!-- 幹線：中央から横線まで -->
+        <line x1="500" y1="0" x2="500" y2="20" stroke="#c8ff00" stroke-width="2"/>
+        <!-- 横枝線 -->
+        <line x1="100" y1="20" x2="900" y2="20" stroke="#c8ff00" stroke-width="2"/>
+        <!-- 各列ドロップ -->
+        <line x1="100" y1="20" x2="100" y2="40" stroke="#c8ff00" stroke-width="2"/>
+        <line x1="300" y1="20" x2="300" y2="40" stroke="#c8ff00" stroke-width="2"/>
+        <line x1="500" y1="20" x2="500" y2="40" stroke="#c8ff00" stroke-width="2"/>
+        <line x1="700" y1="20" x2="700" y2="40" stroke="#c8ff00" stroke-width="2"/>
+        <line x1="900" y1="20" x2="900" y2="40" stroke="#c8ff00" stroke-width="2"/>
+      </svg>
+    </div>
 
     <!-- 5部署 -->
     <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:2px;" class="reveal">
